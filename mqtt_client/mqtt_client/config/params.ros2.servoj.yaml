@@ -1,0 +1,18 @@
+/**/*:
+  ros__parameters:
+    broker:
+      host: localhost
+      port: 1883
+    bridge:
+      mqtt2ros:
+        mqtt_topics:
+          - /robot/servostream
+          - camera/info 
+        /robot/servostream:
+          ros_topic: /servoj_stream
+          primitive: true
+          ros_type: dsr_msgs2/msg/ServojStream
+        camera/info:
+          ros_topic: /camera/camera/color/camera_info_processed
+          primitive: false
+          ros_type: sensor_msgs/msg/CameraInfo
